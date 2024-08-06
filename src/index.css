@@ -1,0 +1,334 @@
+/* Genel sayfa stil ayarları */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4; /* Arka plan rengini daha açık bir gri yapalım */
+}
+
+/* Başlıkların rengi */
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Navigasyon menüsünün görünümü */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  background-color: #007bff; /* Menü arka plan rengini mavi yapalım */
+  border-bottom: 2px solid #0056b3; /* Menü alt kenarı için koyu mavi sınır */
+}
+
+nav ul li {
+  margin: 0;
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Menü bağlantılarının rengini beyaz yapalım */
+}
+
+nav ul li a:hover {
+  color: #e1e1e1; /* Menü bağlantılarına hover efekti olarak açık gri renk */
+}
+
+/* Genel stil */
+.form-container {
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Form elemanları arasına boşluk ekler */
+}
+
+/* Form elemanları ve etiketleri */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Etiket ve giriş elemanları arasına boşluk ekler */
+  flex-wrap: wrap; /* Ekran küçüldüğünde elemanların alt satıra geçmesini sağlar */
+}
+
+/* Etiketler */
+form label {
+  flex: 0 0 150px; /* Etiket genişliğini ayarlar */
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+/* Giriş elemanları */
+form input, form select, form button {
+  flex: 1; /* Giriş elemanlarının genişliğini ayarlar */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Butonlar */
+form button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Tablolar için stil */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Sınırları birleştirelim */
+  margin-top: 1rem; /* Üstten boşluk ekleyelim */
+  background-color: #fff; /* Tablo arka plan rengini beyaz yapalım */
+  border-radius: 10px; /* Tablo köşelerini yuvarlayalım */
+  overflow: hidden; /* Yuvarlanmış köşelerde taşmaları gizleyelim */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tabloya hafif gölge efekti */
+}
+
+/* Tabloların altına bottom katmanı */
+.table-container {
+  position: relative;
+}
+
+table th, table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Tablo hücreleri için hafif gri sınır */
+}
+
+table th {
+  background-color: #007bff; /* Başlık hücreleri için mavi arka plan */
+  color: #fff; /* Başlık hücreleri için beyaz metin rengi */
+}
+
+/* Öğrenciler tablosu için stil */
+.students-table th {
+  background-color: #007bff; /* Başlık hücreleri için mavi arka plan */
+  color: #fff; /* Başlık hücreleri için beyaz metin rengi */
+}
+
+/* Kurslar tablosu için stil */
+.courses-table th {
+  background-color: #ffc107; /* Başlık hücreleri için sarı arka plan */
+  color: #000; /* Başlık hücreleri için siyah metin rengi */
+}
+
+/* Courses tablosu butonları için stil */
+.courses-table td button {
+  background-color: #ffc107; /* Sarı arka plan */
+  color: #000; /* Siyah metin rengi */
+  border: none; /* Sınırları kaldır */
+  padding: 0.5rem 1rem; /* İç boşluk */
+  cursor: pointer; /* Fareyi üzerine getirdiğinde işaretçi göster */
+}
+
+/* Courses tablosu butonlarına üzerine gelindiğinde renk değişimi */
+.courses-table td button:hover {
+  background-color: #ffc107; /* Üzerine gelindiğinde daha koyu sarı */
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Çift sıralar için hafif gri arka plan */
+}
+
+table tr:hover {
+  background-color: #e9ecef; /* Satırlara hover efekti olarak açık gri arka plan */
+}
+
+/* Detaylar sayfası için stil */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Koyu gri arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  color: #ff5722; /* Turuncu renk */
+  margin: 0 0 1rem 0;
+}
+
+.modal-content h3 {
+  color: #e91e63; /* Pembe renk */
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* Detaylar ve liste */
+.modal-content p, .modal-content ul {
+    margin: 0 0 1rem 0;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.modal-content select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.modal-content button {
+    background-color: #ff5722; /* Turuncu renk */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #e64a19; /* Daha koyu turuncu */
+}
+
+.close:hover {
+  color: #c82333; /* Kapatma butonu hover efekti için daha koyu kırmızı */
+}
+
+/* Detaylar ve Kurslar için bölme */
+.details-section, .courses-section {
+  background-color: #fff; /* Arka plan rengini beyaz yapalım */
+  padding: 1.5rem;
+  border-radius: 8px; /* Köşe yuvarlama */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  margin-bottom: 1.5rem; /* Alt boşluk */
+}
+
+.details-section h3 {
+  background-color: #fd7e14; /* Detaylar başlığı için turuncu arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  padding: 0.75rem;
+  border-radius: 4px; /* Köşe yuvarlama */
+  margin: 0 0 1rem 0; /* Alt boşluk */
+}
+
+.courses-section h3 {
+  background-color: #dc3545; /* Kurslar başlığı için kırmızı arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  padding: 0.75rem;
+  border-radius: 4px; /* Köşe yuvarlama */
+  margin: 0 0 1rem 0; /* Alt boşluk */
+}
+
+/* Uygulama konteynerinin ortalanması */
+.App {
+  text-align: center;
+  background: #f0f0f0; /* Arka plan rengini açık gri yaparak daha modern bir görünüm sağlar */
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo stili */
+.App-logo {
+  height: 20vmin; /* Logo boyutunu biraz küçült */
+  pointer-events: none;
+  margin-bottom: 1rem; /* Logo ve metin arasına boşluk ekle */
+}
+
+/* Logo animasyonu için medya sorgusu */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear; /* Döndürme animasyonunu hızlandır */
+  }
+}
+
+/* Uygulama başlık stilini ayarlar */
+.App-header {
+  background-color: #282c34; /* Arka plan rengini koyu gri */
+  color: #ffffff; /* Yazı rengini beyaz */
+  min-height: 60vh; /* Başlık kısmının yüksekliğini ayarla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin); /* Yazı boyutunu ayarla */
+  padding: 1rem; /* İçeriklerin etrafına boşluk ekle */
+  border-bottom: 2px solid #61dafb; /* Alt kısımda mavi bir sınır ekle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekle */
+}
+
+/* Bağlantı stili */
+.App-link {
+  color: #61dafb; /* Bağlantı rengini mavi */
+  font-size: 1.25rem; /* Yazı boyutunu ayarla */
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline; /* Hover durumunda altı çizili yap */
+}
+
+/* Detaylar ve içerik alanları */
+.details-header {
+  background-color: #fd7e14;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.details-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Genel buton stili */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+

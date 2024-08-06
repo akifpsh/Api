@@ -1,0 +1,78 @@
+/* Uygulama konteynerinin ortalanması */
+.App {
+  text-align: center;
+  background: #f0f0f0; /* Arka plan rengini açık gri yaparak daha modern bir görünüm sağlar */
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo stili */
+.App-logo {
+  height: 20vmin; /* Logo boyutunu biraz küçült */
+  pointer-events: none;
+  margin-bottom: 1rem; /* Logo ve metin arasına boşluk ekle */
+}
+
+/* Logo animasyonu için medya sorgusu */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear; /* Döndürme animasyonunu hızlandır */
+  }
+}
+
+/* Uygulama başlık stilini ayarlar */
+.App-header {
+  background-color: #282c34; /* Arka plan rengini koyu gri */
+  color: #ffffff; /* Yazı rengini beyaz */
+  min-height: 60vh; /* Başlık kısmının yüksekliğini ayarla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin); /* Yazı boyutunu ayarla */
+  padding: 1rem; /* İçeriklerin etrafına boşluk ekle */
+  border-bottom: 2px solid #61dafb; /* Alt kısımda mavi bir sınır ekle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekle */
+}
+
+/* Bağlantı stili */
+.App-link {
+  color: #61dafb; /* Bağlantı rengini mavi */
+  font-size: 1.25rem; /* Yazı boyutunu ayarla */
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline; /* Hover durumunda altı çizili yap */
+}
+
+.details-header {
+  background-color: #fd7e14;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.details-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
